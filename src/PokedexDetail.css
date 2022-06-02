@@ -27,6 +27,7 @@
     left: -180px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .pokedex-deatil-img{
     position: relative;
@@ -58,8 +59,8 @@
     background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
 }
 .h1-id{
-    width: 4%;
-    margin-left: 48%;
+    width: fit-content;
+    margin-left: calc(48%);
     border: solid 1px #ccc;
 }
 .container-img>img{

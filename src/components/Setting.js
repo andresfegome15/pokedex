@@ -24,7 +24,8 @@ const Setting = () => {
 
     return (
         <div>
-            <input type="checkbox"  value={background ===""?"#000":"#ccc"} onClick={changeColor}/>
+            <label htmlFor="color"> seleccione color</label>
+            <input id='color' type="checkbox"  value={background ===""?"#000":"#ccc"} onClick={changeColor}/> <br />
             <select  onChange={cambio}>
                 <option value={pagination}>{pagination}</option>
                 <option value="4">4</option>

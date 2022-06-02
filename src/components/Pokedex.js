@@ -48,8 +48,10 @@ const Pokedex = () => {
                 </div>
             </header>
             <div className="container-pokedex">
-          {/*   <button onClick={()=>navegate('/setting')}>setting</button> */}
-            <h2 className='pokedex-welcome'>Bienvenido andres{user},</h2><h2 className='pokedex-h2'>   aquí pordrás encontrar tu pokemón favorito</h2>
+            <button className='btnsetting' onClick={()=>navegate('/setting')}>
+                <img src="https://images.vexels.com/media/users/3/153359/isolated/preview/f253c46ff6fb727415fc70750ac1fb6e-configuracion-del-sistema-icono-de-trazo-de-color.png" alt="" />
+            </button>
+            <h2 className='pokedex-welcome'>Bienvenido {user},</h2><h2 className='pokedex-h2'>   aquí pordrás encontrar tu pokemón favorito</h2>
            
            <div className="pokedex-search">
                 <input placeholder='Search pokemon' type="text" className='pokedex-searchInput' onChange={e => setPokeinput(e.target.value)} value={pokeinput} />
