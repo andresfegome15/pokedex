@@ -10,6 +10,10 @@ const Pokedex = () => {
     /* Estados */
     const background = useSelector(state => state.background)
     const pagination = useSelector(state => state.pagination)
+    const header1 = useSelector(state => state.header1)
+    const header2 = useSelector(state => state.header2)
+    const column = useSelector(state => state.column)
+
     const user =  useSelector(state => state.user)
     const [pokemons, setPokemons] = useState([])
     const [pokemonstype, setPokemonstype] = useState([])
@@ -40,10 +44,10 @@ const Pokedex = () => {
     return (
         <div style={{backgroundColor:`${background}`}}>
             <header>
-                <div className='home-foot-red'>
+                <div className='home-foot-red' style={{backgroundColor: `${header1}`}}>
                 <img className='pokedex-deatil-img' src={img} alt="" />
                 </div>
-                <div className='home-foot-black'>
+                <div className='home-foot-black' style={{backgroundColor: `${header2}`}}>
                 <img className='pokedexdetail-pokeboll' src="https://imagenpng.com/wp-content/uploads/2016/09/Pokebola-pokeball-png-4.png" alt="" />
                 </div>
             </header>
@@ -66,7 +70,7 @@ const Pokedex = () => {
                     }
                 </select>
            </div>
-            <div className='pokemon-cards'>
+            <div className='pokemon-cards'  style={{gridTemplateColumns:column}}>
                 {
                     pokemons.map((pokemon)=>(
                         <PokemonCard key={pokemon.name!== undefined?pokemon.name:pokemon.pokemon.name} pokemonUrl={pokemon.url !== undefined?pokemon.url : pokemon.pokemon.url} />

@@ -28,11 +28,12 @@ position: relative;
 .btnsetting{
   width: 40px;
   height: 40px;
-  left: -15%;
+  left: -22%;
   position: relative;
   border-radius: 20px;
   top: 10px;
   cursor: pointer;
+  background-color: transparent;
 }
 .btnsetting > img{
   width: 30px;

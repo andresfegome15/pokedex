@@ -40,8 +40,8 @@ const PokedexDetail = () => {
                             <h3>Habilidades</h3>
                         </div>
                     <div className='container_h3info'>
-                        <div className="div_h3info"><h2>{pokemon.types?.[0].type.name}</h2></div>
-                        <div className="div_h3info"><h2>{pokemon.types?.[1].type.name}</h2></div>
+                         <div className="div_h3info"><h2>{(pokemon.types?.[0].type.name!==undefined?pokemon.types?.[0].type.name:"Unknown")}</h2></div>
+                         <div className="div_h3info"><h2>{(pokemon?.types?.length <= 1?"Unknow":pokemon.types?.[1].type.name)}</h2></div>
                         <div className="div_h3info"><h2>{pokemon.abilities?.[0].ability.name}</h2></div>
                         <div className="div_h3info"><h2>{pokemon.abilities?.[1].ability.name}</h2></div>
                     </div>
